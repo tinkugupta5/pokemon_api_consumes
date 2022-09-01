@@ -30,7 +30,7 @@ const App = () => {
 
  useEffect(() => {
   getAllPokemons()
- }, [])
+ },[])
 
   return (
     <div className="app-contaner">
@@ -45,7 +45,6 @@ const App = () => {
               name={pokemonStats.name}
               type={pokemonStats.types[0].type.name}
             />)}
-          
         </div>
           <button className="load-more" onClick={() => getAllPokemons()}>Load more</button>
       </div>
