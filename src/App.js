@@ -25,11 +25,12 @@ const App = () => {
       })
     }
     createPokemonObject(data.results)
-    await console.log('MMMMMM',allPokemons);
+     console.log('MMMMMM',allPokemons);
   }
 
  useEffect(() => {
   getAllPokemons()
+ // eslint-disable-next-line react-hooks/exhaustive-deps
  },[])
 
   return (
@@ -37,7 +38,7 @@ const App = () => {
       <h1>Pokemon Evolution</h1>
       <div className="pokemon-container">
         <div className="all-container">
-          {allPokemons.map( (pokemonStats, index) => 
+          {allPokemons.map( (pokemonStats, index) =>
             <PokemonThumb
               key={index}
               id={pokemonStats.id}
